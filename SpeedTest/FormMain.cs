@@ -361,25 +361,15 @@ namespace SpeedTest
 
                 switch (Settings.Default.CheckConnection)
                 {
-                    case 0: // 30 Seconds
+                    case 0: // 10 Minutes
                         if (ts.TotalMinutes >= 10) GetRemoteIP();
                         break;
-                    case 1: // 1 Minute
+                    case 1: // 30 Minutes
                         if (ts.TotalMinutes >= 30) GetRemoteIP();
                         break;
-                    case 2: // 5 Minutes
+                    case 2: // 1 Hour
                         if (ts.TotalMinutes >= 60) GetRemoteIP();
                         break;
-   /*                 case 3: // 10 Minutes
-                        if (ts.TotalMinutes >= 10) GetRemoteIP();
-                        break;
-                    case 4: // 30 Minutes
-                        if (ts.TotalMinutes >= 30) GetRemoteIP();
-                        break;
-                    case 5: // 1 Hour
-                        if (ts.TotalMinutes >= 60) GetRemoteIP();
-                        break;
-    * */
                 }
             }
         }
